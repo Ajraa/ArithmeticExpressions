@@ -115,7 +115,7 @@ int evaluate_evaluation(string eval)
 }
 
 
-string eval = "1+1*3";
+string eval = "-1+1*3";
 List<char> tmpEval = new List<char>();
 tmpEval.Add('p');
 bool par = false;
@@ -156,4 +156,11 @@ foreach (char c in tmpEval)
 }
 string cleanEval = evalBuilder.ToString();
 
-Console.WriteLine(evaluate_evaluation(cleanEval));
+try
+{
+	Console.WriteLine(evaluate_evaluation(cleanEval));
+}
+catch (Exception e)
+{
+    Console.WriteLine("ERROR: {0}", e.Message);
+}
