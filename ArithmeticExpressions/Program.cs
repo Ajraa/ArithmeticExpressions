@@ -42,7 +42,6 @@ int evaluate_evaluation(string eval)
 			{
 
 				queue.Enqueue(c);
-                Console.WriteLine("sbko " + sb.ToString());
 				if(sb.Length > 0)
 				{
 					int n = int.Parse(sb.ToString());
@@ -157,6 +156,4 @@ foreach (char c in tmpEval)
 }
 string cleanEval = evalBuilder.ToString();
 
-
-Console.WriteLine(evaluate_evaluation(eval));
 Console.WriteLine(evaluate_evaluation(cleanEval));
